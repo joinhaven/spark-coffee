@@ -4,6 +4,7 @@
 int state = 0;
 
 void setup() {
+    Serial.begin(9600);
     //tell the device we want to write to this pin
     pinMode(PIN, OUTPUT);
 }
@@ -14,7 +15,8 @@ void loop() {
 
     //invert the state
     state = !state;
+    Serial.println("Flipping state");
 
     //wait half a second
-    delay(500);
+    delay(1000);
 }
