@@ -13,11 +13,11 @@ useful commands.
 
 Compiling:
 
-    particle compile blinky.ino
+    particle compile coffee.ino
 
 Flashing:
 
-    particle flash spark-coffee blinky.ino
+    particle flash spark-coffee coffee.ino
 
 Get serial monitor (debugging):
 
@@ -25,3 +25,7 @@ Get serial monitor (debugging):
     # lists some serial connections
     particle serial monitor 1
     # connect to the first serial connection
+
+## HTTP calls
+
+See [HttpClient documentation](https://github.com/nmattisson/HttpClient).
