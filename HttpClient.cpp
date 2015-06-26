@@ -1,5 +1,7 @@
 #include "HttpClient.h"
 
+#define LOGGING
+
 static const uint16_t TIMEOUT = 5000; // Allow maximum 5s between data packets.
 
 /**
