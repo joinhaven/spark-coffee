@@ -19,6 +19,7 @@ int postedBrewingMessage = 0;
 int buttonPressed = 0;
 int loopDelayInMilliseconds = 100; // in milliseconds
 int iterationsSinceBrewingSent = 0;
+int minutesToWait = 10;
 
 void setup() {
     Serial.begin(9600);
@@ -59,7 +60,7 @@ void loop() {
         digitalWrite(D7, iterationsSinceBrewingSent % 4 == 0);
 
         // takes ten minutes to brew coffee, send ready message then
-        if (iterationsSinceBrewingSent >= 1000 * 60 * 10 / loopDelayInMilliseconds) {
+        if (iterationsSinceBrewingSent >= 1000 * 60 * minutesToWait / loopDelayInMilliseconds) {
             Serial.println("posting 'ready'...");
 
             request.hostname = SERVER_HOSTNAME;
